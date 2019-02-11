@@ -4,8 +4,33 @@
 #index:
 #    path: /
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
-app_lucky_number:
+index:
     path: /lucky/number
     controller: App\Controller\LuckyController::number
-    #url : /create/formation
+    
+app_loisir_create:
+    path: /create/loisir
+    controller : App\Controller\LoisirController::create
+    
+valid_loisir:
+    path: /valid/loisir
+    controller : App\Controller\LoisirController::valid
+ 
+valid_experience:
+    path: /valid/experience
+    controller : App\Controller\ExperienceController::valid
+ 
+valid_formation:
+    path: /valid/formation
+    controller : App\Controller\FormationController::valid
+    
+valid_competence:
+    path: /valid/competence
+    controller : App\Controller\CompetenceController::valid
+ 
+ 
+ 
+ 
+ 
+    #url : ajouter une nouvelle url qdon créer un controller
     
