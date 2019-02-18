@@ -110,10 +110,16 @@
             <dt>Formation</dt>
             <dd>
             {% for formation in formations %} 
+            
               <h2>  {{ formation.getIntitule() }} </h2>
+                <td>
+                    <a href="{{ path('formation_show', {'id': formation.id}) }}">show</a>
+                    <a href="{{ path('formation_edit', {'id': formation.id}) }}">edit</a>
+                    <a href="{{ path('formation_delete', {'id': formation.id}) }}">delete</a>
+                </td>
                    <p><strong>Lieu:</strong> {{ formation.getLieu() }} </br>
                   {{ formation.getDescription() }}
-                
+              
             {% endfor %}
         
             </dd>
@@ -126,6 +132,12 @@
                 {% for competence in competences %} 
               <h2>  {{ competence.getCompetences() }} </h2>
                <p>   {{ competence.getDescription() }}</p>
+               
+               <td>
+                    <a href="{{ path('competence_show', {'id': competence.id}) }}">show</a>
+                    <a href="{{ path('competence_edit', {'id': competence.id}) }}">edit</a>
+                    <a href="{{ path('competence_delete', {'id': competence.id}) }}">delete</a>
+                </td>
               {% endfor %}
                 <h2></h2>
               
@@ -137,7 +149,11 @@
             <dd>
                 {% for experience in experiences %} 
               <h2>  {{ experience.getExperience() }} <span>{{ experience.getLieu() }}</span></h2>
-               
+                 <td>
+                    <a href="{{ path('experience_show', {'id': experience.id}) }}">show</a>
+                    <a href="{{ path('experience_edit', {'id': experience.id}) }}">edit</a>
+                    <a href="{{ path('experience_delete', {'id': experience.id}) }}">delete</a>
+                </td>
                  <ul>
                     <li> {{ experience.getDescription() }} </li>
                     </ul>
@@ -152,8 +168,17 @@
         
             <dt>Hobbies</dt>
                      <dd>
-                        {% for hobbies in hobbies %} 
-                         <p> {{ hobbies.getHobbies() }} <p> 
+                        {% for hobby in hobbies %} 
+                       <p>
+                <td>{{ hobby.id }}</td>
+                <td>{{ hobby.hobbies }}</td>
+                <td>
+                    <a href="{{ path('hobbies_show', {'id': hobby.id}) }}">show</a>
+                    <a href="{{ path('hobbies_edit', {'id': hobby.id}) }}">edit</a>
+                    <a href="{{ path('hobbies_delete', {'id': hobby.id}) }}">delete</a>
+                    
+                </td>
+            </p>
                         {% endfor %}
                         </dd>
         <div class="clear"></div>

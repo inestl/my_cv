@@ -46,7 +46,12 @@ class HobbiesController extends Controller
             'hobby' => $hobby,
             'form' => $form->createView(),
         ]);
+        
+       
+    
     }
+    
+    
 
     /**
      * @Route("/{id}", name="hobbies_show", methods={"GET"})
@@ -92,5 +97,7 @@ class HobbiesController extends Controller
         }
 
         return $this->redirectToRoute('hobbies_index');
+        
+
     }
 }
