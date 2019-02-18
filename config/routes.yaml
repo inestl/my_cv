@@ -1,9 +1,44 @@
-# app/config/security.yml
-security:
-    # ...
+# This file is the entry point to configure your own HTTP routes.
+# Files in the routes/ subdirectory configure the routes for your dependencies.
 
-    firewalls:
-        # http_basic
-        main:
-            anonymous: ~
-            http_basic: ~
+#index:
+#    path: /
+#    defaults: { _controller: 'App\Controller\DefaultController::index' }
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
+
+form_formation: 
+    path: /formation/create
+    controller: App\Controller\FormationController::create
+    
+form_formation_edit:
+    path: /formation/edit/(id)
+    controller: App\Controller\LuckyController::edit
+    
+valid_formation:
+    path: /formation/valid_formation
+    controller: App\Controller\FormationController::valid
+    
+form_loisir: 
+    path: /hobbies/create
+    controller: App\Controller\LoisirsController::create
+    
+valid_loisir: 
+    path: /hobbies/valid_loisir
+    controller: App\Controller\LoisirsController::valid
+    
+form_experiences: 
+    path: /experiences/create
+    controller: App\Controller\ExperiencesController::create
+    
+valid_experiences: 
+    path: /experiences/valid_experiences
+    controller: App\Controller\ExperiencesController::valid
+    
+admin: 
+    path: /admin
+    controller: App\Controller\LuckyController::admin

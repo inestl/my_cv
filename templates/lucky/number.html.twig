@@ -182,6 +182,9 @@
                         {% endfor %}
                         </dd>
         <div class="clear"></div>
+{% if is_granted('ROLE_ADMIN') %}
+    <a href="...">Delete</a>
+{% endif %}
     
     </div>
     

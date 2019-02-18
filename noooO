@@ -1,0 +1,39 @@
+^X
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   config/routes.yaml
+#	new file:   config/security.yaml
+#	modified:   src/Controller/CompetenceController.php
+#	modified:   src/Controller/ExperienceController.php
+#	modified:   src/Controller/FormationController.php
+#	modified:   src/Controller/HobbiesController.php
+#	new file:   src/Form/Competence1Type.php
+#	new file:   src/Form/Experience1Type.php
+#	new file:   src/Form/Formation1Type.php
+#	new file:   templates/competence/_delete_form.html.twig
+#	new file:   templates/competence/_form.html.twig
+#	new file:   templates/competence/edit.html.twig
+#	new file:   templates/competence/index.html.twig
+#	new file:   templates/competence/new.html.twig
+#	new file:   templates/competence/show.html.twig
+#	new file:   templates/experience/_delete_form.html.twig
+#	new file:   templates/experience/_form.html.twig
+#	new file:   templates/experience/edit.html.twig
+#	new file:   templates/experience/index.html.twig
+#	new file:   templates/experience/new.html.twig
+#	new file:   templates/experience/show.html.twig
+#	new file:   templates/formation/_delete_form.html.twig
+#	new file:   templates/formation/_form.html.twig
+#	modified:   templates/formation/create.html.twig
+#	new file:   templates/formation/edit.html.twig
+#	new file:   templates/formation/index.html.twig
+#	new file:   templates/formation/new.html.twig
+#	new file:   templates/formation/show.html.twig
+#	modified:   templates/hobbies/index.html.twig
+#	modified:   templates/lucky/number.html.twig
+#
