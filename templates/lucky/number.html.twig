@@ -85,7 +85,6 @@
     
         <div id="contact-info" class="vcard">
         
-            <!-- Microformats! -->
          
             <h1 class="fn"> La pieuvre</h1>
         
@@ -109,19 +108,25 @@
          
             <dt>Formation</dt>
             <dd>
+        
+            <!-- Microformats! -->
             {% for formation in formations %} 
             
               <h2>  {{ formation.getIntitule() }} </h2>
                 <td>
-                    <a href="{{ path('formation_show', {'id': formation.id}) }}">show</a>
-                    <a href="{{ path('formation_edit', {'id': formation.id}) }}">edit</a>
-                    <a href="{{ path('formation_delete', {'id': formation.id}) }}">delete</a>
+                    {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('formation_show', {'id': formation.id}) }}">show</a> {% endif %}
+                    {% if is_granted('ROLE_ADMIN') %}<a href="{{ path('formation_edit', {'id': formation.id}) }}">edit</a> {% endif %}
+                    {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('formation_delete', {'id': formation.id}) }}">delete</a> {% endif %}
                 </td>
                    <p><strong>Lieu:</strong> {{ formation.getLieu() }} </br>
                   {{ formation.getDescription() }}
               
             {% endfor %}
-        
+            
+            
+            
+                    
+                    
             </dd>
             
             
@@ -134,9 +139,9 @@
                <p>   {{ competence.getDescription() }}</p>
                
                <td>
-                    <a href="{{ path('competence_show', {'id': competence.id}) }}">show</a>
-                    <a href="{{ path('competence_edit', {'id': competence.id}) }}">edit</a>
-                    <a href="{{ path('competence_delete', {'id': competence.id}) }}">delete</a>
+                   {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('competence_show', {'id': competence.id}) }}">show</a> {% endif %}
+                   {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('competence_edit', {'id': competence.id}) }}">edit</a> {% endif %}
+                   {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('competence_delete', {'id': competence.id}) }}">delete</a> {% endif %}
                 </td>
               {% endfor %}
                 <h2></h2>
@@ -150,9 +155,9 @@
                 {% for experience in experiences %} 
               <h2>  {{ experience.getExperience() }} <span>{{ experience.getLieu() }}</span></h2>
                  <td>
-                    <a href="{{ path('experience_show', {'id': experience.id}) }}">show</a>
-                    <a href="{{ path('experience_edit', {'id': experience.id}) }}">edit</a>
-                    <a href="{{ path('experience_delete', {'id': experience.id}) }}">delete</a>
+                   {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('experience_show', {'id': experience.id}) }}">show</a> {% endif %}
+                   {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('experience_edit', {'id': experience.id}) }}">edit</a> {% endif %}
+                   {% if is_granted('ROLE_ADMIN') %} <a href="{{ path('experience_delete', {'id': experience.id}) }}">delete</a> {% endif %}
                 </td>
                  <ul>
                     <li> {{ experience.getDescription() }} </li>
@@ -173,9 +178,9 @@
                 <td>{{ hobby.id }}</td>
                 <td>{{ hobby.hobbies }}</td>
                 <td>
-                    <a href="{{ path('hobbies_show', {'id': hobby.id}) }}">show</a>
-                    <a href="{{ path('hobbies_edit', {'id': hobby.id}) }}">edit</a>
-                    <a href="{{ path('hobbies_delete', {'id': hobby.id}) }}">delete</a>
+                    {% if is_granted('ROLE_ADMIN') %}  <a href="{{ path('hobbies_show', {'id': hobby.id}) }}">show</a> {% endif %}
+                    {% if is_granted('ROLE_ADMIN') %}  <a href="{{ path('hobbies_edit', {'id': hobby.id}) }}">edit</a> {% endif %}
+                    {% if is_granted('ROLE_ADMIN') %}  <a href="{{ path('hobbies_delete', {'id': hobby.id}) }}">delete</a> {% endif %}
                     
                 </td>
             </p>

@@ -34,7 +34,7 @@ class LuckyController extends Controller {
      
     public function admin()
     {
-        return new Response('<html><body>Admin page!</body></html>');
+        return new Response(  $this->redirectToRoute('app_lucky_number') );
     }
  
 }

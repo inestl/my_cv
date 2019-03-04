@@ -9,11 +9,12 @@ security:
             memory:
                 users:
                     ines:
-                        password: $2y$12$edSpYq/BTdjZOsbP4E.m2u/UPRuvPMy1kJDG2qzYNr3FJXRvbuVHS
+                        password: $2y$12$SbtvQKai6fWsz3YGsOO3FuPsepCM3F.DR5uHwwvMjXa8xZ6gwAz/2
                         roles: 'ROLE_USER'
                     admin:
-                        password: $2y$12$edSpYq/BTdjZOsbP4E.m2u/UPRuvPMy1kJDG2qzYNr3FJXRvbuVHS
+                        password: $2y$12$SbtvQKai6fWsz3YGsOO3FuPsepCM3F.DR5uHwwvMjXa8xZ6gwAz/2
                         roles: 'ROLE_ADMIN'
+                    
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
